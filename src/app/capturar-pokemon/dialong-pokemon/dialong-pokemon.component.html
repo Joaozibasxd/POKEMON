@@ -1,0 +1,58 @@
+<div fxLayout="row" class="pokedex">
+  <mat-card class="example-card" fxLayout="column" fxFlex="65">
+    <mat-card-header>
+      <mat-card-title style="font-family: Impact; font-size: 75px">P O K E D E X</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="cardImage">
+      <mat-card-subtitle style="color: black">Nome: {{ data.name }}</mat-card-subtitle>
+      <img src="{{data.sprites.other['official-artwork'].front_default}}"
+           style="position: relative" width="150px">
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card" fxLayout="column" fxFlex="35">
+    <mat-card-header>
+      <mat-card-title fxFlexAlign="center" style="font-family: 'Arial Black'; font-size: 20px; font-weight: bold;">S t a
+        t u s
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+      <div fxLayout="row" fxLayoutGap="10">
+        <div fxLayout="column" style="font-family: 'Arial Black'">
+          HP
+        </div>
+        <div fxLayout="column">
+          <div class="barra-HP" style="margin-top: 2px">
+            <label style="font-size: 10px; text-align: center">{{data.stats[0].base_stat}}</label>
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="10">
+        <div fxLayout="column" style="font-family: 'Arial Black'">
+          CP: {{data.CP}}
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="10">
+        <div fxLayout="column" style="font-family: 'Arial Black'">
+          Ataques: {{retornaStringATKs()}}
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="10">
+        <div fxLayout="column" style="font-family: 'Arial Black'">
+          Defesa: {{data.stats[2].base_stat}}
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="10">
+        <div fxLayout="column" style="font-family: 'Arial Black'">
+          Tipo: {{retornaTipos()}}
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="10">
+        <div fxLayout="column" style="font-family: 'Arial Black'">
+          Speed: {{data.stats[5].base_stat}}
+        </div>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>

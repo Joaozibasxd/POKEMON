@@ -1,0 +1,23 @@
+
+  <mat-sidenav-container class="example-container">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" class="buttonMenu">
+      <mat-icon></mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" style="z-index: 9999; position: relative">
+      <button mat-menu-item routerLink="home">
+        <mat-icon></mat-icon>
+        <span>INICIO</span>
+      </button>
+          <button mat-menu-item routerLink="/capturar-pokemon">
+            <mat-icon>Capturar Pokemon</mat-icon>
+            <span>Capturar Pokemon</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>notifications_off</mat-icon>
+            <span>Meus Pokemons</span>
+          </button>
+    </mat-menu>
+    <mat-sidenav>Start</mat-sidenav>
+    <mat-sidenav position="end">End</mat-sidenav>
+    <section>Pokemon Angular</section>
+  </mat-sidenav-container>

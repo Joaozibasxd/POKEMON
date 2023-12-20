@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+body {
+  background-image: url('/assets/img/unnamed.png');
+  background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
+  background-position: left; /* Centraliza a imagem no corpo */
+  height: 100vh; /* Define a altura do corpo como 100% da altura da janela de visualização (viewport) */
+  z-index: -1;
+  background-color: black;
+}
